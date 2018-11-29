@@ -1,0 +1,42 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+libraries:
+  - name: PIL
+    version: latest
+
+skip_files:
+- ^(.*/)?#.*#$
+- ^(.*/)?.*~$
+- ^(.*/)?.*\.py[co]$
+- ^(.*/)?.*/RCS/.*$
+- ^(.*/)?\..*$
+- ^(.*/)?.*\.bak$
+- .git
+- log/*
+- frontend/node_modules
+- frontend/.cache
+- backup
+
+
+
+handlers:
+- url: /api/.*
+  script: api.app
+  secure: always
+
+- url: /hello
+  script: main.app
+  secure: always
+
+- url: /(.+)
+  static_files: frontend/dist/\1
+  upload: frontend/dist/(.+)
+  secure: always
+
+- url: /
+  static_files: frontend/dist/index.html
+  upload: frontend/dist/index.html
+  secure: always
+

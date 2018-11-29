@@ -1,0 +1,10 @@
+.idea
+.DS_Store
+venv
+**/node_modules/**
+**/.cache/**
+**/lib/**
+**/dist/**
+*.pyc
+yarn-error.log
+memo.txt
