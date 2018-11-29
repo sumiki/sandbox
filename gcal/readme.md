@@ -1,7 +1,15 @@
 
 # Google Calendar API using Service Account Sample
 
+I needed to push event data to google calendar without Oauth.
 
+There is not much documentation how to do it but here is an sample app.
+
+Online demo 
+
+https://gcalservice.appspot.com/
+
+You can type summary and description and it goes to today's calendar.
 
 ## Setup
 
@@ -16,3 +24,9 @@
 9. Share the calendar with service account email XXX@gcalservice.iam.gserviceaccount.com.
 10. dev_appserver.py app.yaml for development
 11. gcloud app deploy for production
+
+
+
+## Tech Stacks
+
+GAE python / create-react-app / google calendar api v3 / Material-Ui

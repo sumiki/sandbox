@@ -101,7 +101,7 @@ class App extends React.Component {
                         this.setState({
                             loading: false,
                         })
-                        location.reload();
+                        window.location.reload();
                     }
                 })
             })
