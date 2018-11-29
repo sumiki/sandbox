@@ -17,6 +17,8 @@ https://face-221918.appspot.com/
 5. gcloud app deploy for production
 
 
+## Tech Stacks
 
+GAE py / Vision API / react / parcel
 
 
