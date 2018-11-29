@@ -8,3 +8,4 @@ venv
 *.pyc
 yarn-error.log
 memo.txt
+**/service_account/*.json
