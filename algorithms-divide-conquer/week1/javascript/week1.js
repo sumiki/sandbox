@@ -11,7 +11,7 @@ export default {
         }
         return [
             parseInt( num_str.substring(0, split_digit) ),
-            parseInt( num_str.substring(split_digit, split_digit.length) )
+            parseInt( num_str.substring(split_digit, num_str.length) )
         ]
     },
     karatsuba: function(int1, int2){

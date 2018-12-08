@@ -17,5 +17,10 @@ describe( 'karatsuba', function(){
         const product = week1.karatsuba(1234, 5678);
         expect(product).toBe(7006652);
     })
+
+    it('should return a correct multiplication result for 1234 * 5678', function(){
+        const product = week1.karatsuba(87654, 2335);
+        expect(product).toBe(204672090);
+    })
 } )
 
