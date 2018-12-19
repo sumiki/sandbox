@@ -38,3 +38,15 @@ class Homework1:
         d, inversion_count_d = Homework1.merge_and_count( b, c )
 
         return d, ( inversion_count_b + inversion_count_c + inversion_count_d )
+
+
+if __name__ == '__main__':
+    with open('./list.txt') as f:
+        content = f.readlines()
+    # you may also want to remove whitespace characters like `\n` at the end of each line
+    content = [int(x.strip()) for x in content]
+    print Homework1.sort_and_count(content)[1]
+
+
+    # 2397819672 is wrong... 2018/12/19
+    # 2407905288
