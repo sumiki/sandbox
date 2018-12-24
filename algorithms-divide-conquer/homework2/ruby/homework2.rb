@@ -34,7 +34,7 @@ class Homework2
       end
       
       if item < pivit
-        #p "@array[i]: #{@array[i]} <=> @array[j]: #{@array[j]}"
+        #p "@array[i]:[#{i}] #{@array[i]} <=> @array[j]:[#{j}] #{@array[j]}"
         tmp = @array[i]
         @array[i] = @array[j]
         @array[j] = tmp
@@ -44,7 +44,7 @@ class Homework2
     end
 
     if i != pivit_index
-      #p "@array[pivit_index]:#{@array[pivit_index]} <=> @array[i - 1]:#{@array[i - 1]}"
+      #p "@array[pivit_index]:[#{pivit_index}] #{@array[pivit_index]} <=> @array[i - 1]:[#{ i - 1 }]#{@array[i - 1]}"
       tmp = @array[i - 1]
       @array[i - 1] = @array[pivit_index]
       @array[pivit_index] = tmp
