@@ -24,11 +24,12 @@ class Homework2
     #p "final_index: #{final_index}"
     pivit_index = @pivit_index + origin_index
     pivit = @array[pivit_index]
-    i = origin_index + 1
+    i = origin_index
 
     for j in origin_index..final_index do
       item = @array[j]
       if j == pivit_index
+        i += 1
         next
       end
       
