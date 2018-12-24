@@ -40,12 +40,13 @@ class Homework2
         i += 1
       end
       
-      if i != pivit_index and j == final_index
-        #p "@array[pivit_index]:#{@array[pivit_index]} <=> @array[i - 1]:#{@array[i - 1]}"
-        tmp = @array[i - 1]
-        @array[i - 1] = @array[pivit_index]
-        @array[pivit_index] = tmp
-      end
+    end
+
+    if i != pivit_index
+      #p "@array[pivit_index]:#{@array[pivit_index]} <=> @array[i - 1]:#{@array[i - 1]}"
+      tmp = @array[i - 1]
+      @array[i - 1] = @array[pivit_index]
+      @array[pivit_index] = tmp
     end
     
     if i > origin_index
