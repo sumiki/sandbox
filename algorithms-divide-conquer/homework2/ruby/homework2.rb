@@ -1,7 +1,4 @@
 
-
-
-
 class Homework2
   
   attr_accessor :array, :count
@@ -18,12 +15,19 @@ class Homework2
   
   def quicksort( origin_index, final_index )
     @count += 1
+    
+    #if @count > 5
+    #  return
+    #end
+    
     #p @array
     #p "---first: #{@array[origin_index..final_index]}"
     #p "origin_index: #{origin_index}"
     #p "final_index: #{final_index}"
-    pivit_index = @pivit_index + origin_index
-    pivit = @array[pivit_index]
+    
+    pivit_index = @array.index(@array[origin_index..final_index][@pivit_index])
+    pivit = @array[origin_index..final_index][@pivit_index]
+    #p "pivit [#{pivit_index}] : #{ pivit }"
     i = origin_index
 
     for j in origin_index..final_index do
@@ -42,9 +46,9 @@ class Homework2
       end
       
     end
-
-    if i != pivit_index
-      #p "@array[pivit_index]:[#{pivit_index}] #{@array[pivit_index]} <=> @array[i - 1]:[#{ i - 1 }]#{@array[i - 1]}"
+    
+    if (i - 1) != pivit_index
+      #p "---pivit swap---@array[pivit_index]:[#{pivit_index}] #{@array[pivit_index]} <=> @array[i - 1]:[#{ i - 1 }]#{@array[i - 1]}"
       tmp = @array[i - 1]
       @array[i - 1] = @array[pivit_index]
       @array[pivit_index] = tmp
@@ -64,6 +68,7 @@ class Homework2
 
     #p "final_index:#{final_index}"
     #p "next_origin: #{next_origin}"
+    #p final_index - next_origin
     
     if final_index - next_origin >= 1
       #p "second : #{ next_origin } #{ final_index  }"
