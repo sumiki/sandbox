@@ -20,8 +20,8 @@ class Homework2
     #  return
     #end
     
-    p @array
-    p "---first: #{@array[origin_index..final_index]}"
+    #p @array
+    #p "---first: #{@array[origin_index..final_index]}"
     #p "origin_index: #{origin_index}"
     #p "final_index: #{final_index}"
     pivit_index_config = @pivit_index
@@ -33,7 +33,7 @@ class Homework2
     
     pivit_index = @array.index(@array[origin_index..final_index][pivit_index_config])
     pivit = @array[origin_index..final_index][pivit_index_config]
-    p "pivit [#{pivit_index}] : #{ pivit }"
+    #p "pivit [#{pivit_index}] : #{ pivit }"
     i = origin_index
 
     for j in origin_index..final_index do
@@ -61,7 +61,8 @@ class Homework2
     next_origin = i
     if pivit_index < i
       replace_index -= 1
-    elsif pivit_index > i
+    end
+    if pivit_index >= i
       next_origin += 1
     end
 
@@ -79,7 +80,7 @@ class Homework2
       @array[pivit_index] = tmp
     end
 
-    p "---last: #{@array[origin_index..final_index]}"
+    #p "---last: #{@array[origin_index..final_index]}"
     #p @array
     #p "pivit: [#{pivit_index}] = #{ pivit }"
     #p "=To next =#{ final_index - origin_index > 1 }==========="
@@ -97,8 +98,8 @@ class Homework2
         #p "first : #{ origin_index } #{ replace_index - 1  }"
         quicksort( origin_index, replace_index - 1  )
       end
-  
-      if final_index - next_origin > 1
+      
+      if final_index - next_origin >= 1
         #p "second : #{ next_origin } #{ final_index  }"
         quicksort( next_origin, final_index )
       end
